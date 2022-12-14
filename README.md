@@ -1,2 +1,2 @@
-# Fastify Cloud Function v2
+# Fastify - Google Cloud Function v2
 Template for Fastify Cloud Function v2
