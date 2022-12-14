@@ -1,0 +1,42 @@
+{
+  "name": "google-cloud-functions-ts",
+  "version": "0.0.7",
+  "main": "dist/index.js",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@google-cloud/functions-framework": "3.1.2",
+    "@types/json2csv": "5.0.3",
+    "@types/node": "18.11.9",
+    "rimraf": "3.0.2",
+    "tsc-watch": "5.0.3",
+    "typescript": "4.8.4",
+    "@typescript-eslint/eslint-plugin": "5.40.1",
+    "@typescript-eslint/parser": "5.40.1",
+    "eslint": "8.25.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "prettier": "2.7.1"
+  },
+  "scripts": {
+    "build": "yarn clean && tsc",
+    "clean": "rimraf dist",
+    "deploy:dev": "gcloud functions deploy hello-world --entry-point cloudFunction --runtime nodejs16 --trigger-http --project projectName --gen2 --region us-central1 --set-secrets 'CONFIG=projects:latest' --set-env-vars TZ='America/Los_Angeles'",
+    "deploy:prod": "gcloud functions deploy hello-world --entry-point cloudFunction --runtime nodejs16 --trigger-http --project projectName --gen2 --region us-central1 --set-secrets 'CONFIG=projects:latest' --set-env-vars TZ='America/Los_Angeles'",
+    "dev": "tsc-watch --onSuccess \"functions-framework --target=pliancyReports\"",
+    "lint": "eslint --ext .ts src",
+    "lint:fix": "eslint --ext .ts src --fix",
+    "gcp-build": "yarn build"
+  },
+  "dependencies": {
+    "@fastify/autoload": "5.4.1",
+    "@fastify/bearer-auth": "8.0.1",
+    "dotenv": "16.0.3",
+    "fastify": "4.9.2",
+    "pino": "8.7.0",
+    "zod": "3.19.1"
+  },
+  "volta": {
+    "node": "18.12.0",
+    "yarn": "1.22.19"
+  }
+}
