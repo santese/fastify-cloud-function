@@ -16,7 +16,7 @@ fastify.addContentTypeParser('application/json', {}, (req, body: any, done) => {
 
 // Autoload PLugin for automatic routes loading, folder is ./reports for routes
 fastify.register(autoLoad, {
-    dir: join(__dirname, 'reports'),
+    dir: join(__dirname, 'api'),
 })
 
 // Bearer Token Authentication Plugin
