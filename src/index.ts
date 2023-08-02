@@ -14,7 +14,7 @@ fastify.addContentTypeParser('application/json', {}, (req, body: any, done) => {
     done(null, body.body)
 })
 
-// Autoload PLugin for automatic routes loading, folder is ./reports for routes
+// Autoload PLugin for automatic routes loading, folder is ./api for routes
 fastify.register(autoLoad, {
     dir: join(__dirname, 'api'),
 })
