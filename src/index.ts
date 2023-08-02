@@ -25,7 +25,7 @@ fastify.register(bearerAuthPlugin, {
 })
 
 // Export entry point for Google Cloud Functions
-export const cloudFunction: HttpFunction = async (req, res) => {
+export const main: HttpFunction = async (req, res) => {
     fastify.ready(async () => {
         await fastify.ready()
         fastify.server.emit('request', req, res)
