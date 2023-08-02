@@ -3,7 +3,7 @@ import { HttpFunction } from '@google-cloud/functions-framework'
 import autoLoad from '@fastify/autoload'
 import bearerAuthPlugin from '@fastify/bearer-auth'
 import { join } from 'path'
-import config from './common/config'
+import env from './common/environment'
 
 // Init Fastify server
 const fastify = Fastify({ ignoreTrailingSlash: true })
@@ -21,7 +21,7 @@ fastify.register(autoLoad, {
 
 // Bearer Token Authentication Plugin
 fastify.register(bearerAuthPlugin, {
-    keys: new Set(config.apiKeys),
+    keys: new Set(env.API_KEYS),
 })
 
 // Export entry point for Google Cloud Functions
