@@ -1,22 +1,26 @@
 {
   "compilerOptions": {
-      "lib": ["ES2020"],
-      "module": "commonjs",
-      "target": "ES2018",
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "allowJs": true,
-      "checkJs": true,
-      "importHelpers": true,
-      "jsx": "react",
-      "strict": true,
-      "pretty": true,
-      "sourceMap": true,
-      "declaration": true,
-      "skipLibCheck": true,
-      "outDir": "./dist",
-      "baseUrl": "./src",
-      "rootDir": "./src",
+    "lib": [
+      "ES2020"
+    ],
+    "module": "commonjs",
+    "target": "ES2018",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": true,
+    "importHelpers": true,
+    "jsx": "react",
+    "strict": true,
+    "pretty": true,
+    "sourceMap": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "rootDir": "./src",
   },
-  "include": ["src/**/*"]
+  "include": [
+    "src/**/*"
+  ]
 }
