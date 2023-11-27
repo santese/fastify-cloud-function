@@ -5,7 +5,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@google-cloud/functions-framework": "3.3.0",
-    "@types/json2csv": "5.0.3",
+    "@types/json2csv": "5.0.7",
     "@types/node": "20.8.9",
     "rimraf": "5.0.1",
     "tsc-watch": "6.0.4",
